@@ -154,8 +154,10 @@ IntArray::IntArray(const IntArray& other) {
     capacity = other.capacity;
     count = other.count;
     data = new int[capacity];           
-    for (int i = 0; i < count; i++)
+    for (int i = 0; i < count; i++){
         data[i] = other.data[i]; 
+    }
+    Tracker::objectCreated();
     }
 
 // Copy Assignment Operator
